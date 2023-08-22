@@ -15,13 +15,16 @@ function onInput(event) {
 }
 
 let array = [];
-
+let step = 30;
 function createBoxes() {
   for (let counter = 0; counter < amount; counter++) {
     const newDiv = document.createElement("div");
     newDiv.style.backgroundColor = getRandomHexColor();
-    newDiv.style.width = "30px";
-    newDiv.style.height = "30px";
+    
+    step += 10;
+    newDiv.style.width = `${step}px`;
+    newDiv.style.height = `${step}px`;
+  
     array.push(newDiv);
   }
 
